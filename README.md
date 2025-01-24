@@ -1,2 +1,1 @@
-# Odoo-Custom-Modules
-internal_customization and om_hospital for hospital management system
+# Odoo-Custom-Modules for hospital management system
