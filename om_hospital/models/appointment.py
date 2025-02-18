@@ -11,7 +11,7 @@ class HospitalAppointment(models.Model):
     patient_id = fields.Many2one("hospital.patient", string="Patient", required=False, ondelete='restrict')
     date_appointment = fields.Date(string='Date')
     note = fields.Text(string='Note')
-    reference = fields.Char(string='Reference', default='New')
+    reference = fields.Char(string='Reference', default='New', help='Reference for patient')
     state = fields.Selection([('draft', 'Draft'), ('confirmed', 'Confirmed'), ('ongoing', 'Ongoing'),
                               ('done', 'Done'), ('cancel', 'Cancel')], default='draft', tracking=True)
     appointment_line_ids = fields.One2many("hospital.appointment.line",'appointment_id',string='Lines')

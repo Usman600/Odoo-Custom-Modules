@@ -7,12 +7,12 @@
     'description': """
 This module offers the basic functionalities to manage hospital data.
     """,
-    "depends":[
+    "depends": [
         "mail",
         "product",
         "account",
     ],
-    "data":[
+    "data": [
         "security/security.xml",
         "security/ir.model.access.csv",
         "data/sequence.xml",
@@ -21,7 +21,10 @@ This module offers the basic functionalities to manage hospital data.
         "views/appointment_views.xml",
         "views/appointment_line_views.xml",
         "views/patient_tag_view.xml",
+        "views/account_move_views.xml",
         "views/menu.xml",
+        "reports/report.xml",
+        'reports/report_patient_template.xml',
 
     ]
 }

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <template id="report_patient">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="doc">
+                <div class="page"
+                     style="font-family: 'Arial', sans-serif; background-color: #f8faff; padding: 20px; border: 2px solid #007bff; border-radius: 10px;">
+                    <!-- Header Section -->
+                    <div style="background-color: #007bff; color: white; padding: 15px; text-align: center; border-radius: 8px 8px 0 0;">
+                        <h2 style="margin: 0;">Patient Card</h2>
+                    </div>
+
+                    <!-- Patient Info -->
+                    <div style="padding: 20px; background: white; border-radius: 0 0 8px 8px;">
+                        <p style="border-bottom: 1px solid #007bff; padding-bottom: 5px;">
+                            <strong style="color: #007bff;">Name:</strong>
+                            <span t-esc="doc.name"/>
+                        </p>
+                        <p style="border-bottom: 1px solid #007bff; padding-bottom: 5px;">
+                            <strong style="color: #007bff;">Date of Birth:</strong>
+                            <span t-esc="doc.date_of_birth"/>
+                        </p>
+                        <p style="border-bottom: 1px solid #007bff; padding-bottom: 5px;">
+                            <strong style="color: #007bff;">Gender:</strong>
+                            <span t-esc="doc.gender"/>
+                        </p>
+                        <p style="border-bottom: 1px solid #007bff; padding-bottom: 5px;">
+                            <t t-foreach="doc.tag_ids" t-as="tag">
+
+                                <strong style="color: #007bff;">Tag:</strong>
+                                <span t-esc="tag.name"/>
+
+                            </t>
+                        </p>
+                    </div>
+                </div>
+            </t>
+        </t>
+    </template>
+</odoo>
